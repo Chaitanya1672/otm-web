@@ -33,8 +33,7 @@
       {
         "code": 380,
         "ignoreComments": true,
-        "skipBlankLines": true,
-        "skipComments": true
+        "ignoreTrailingComments": true
       }
     ],
     "react/react-in-jsx-scope": "off",
