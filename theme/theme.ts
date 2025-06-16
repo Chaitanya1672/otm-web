@@ -5,6 +5,7 @@ export const lightTheme = createTheme({
     mode: 'light',
     primary: {
       main: '#1976d2', // Blue
+      // main: '#9eb857' // Green
     },
     secondary: {
       main: '#dc004e', // Pink
@@ -26,6 +27,7 @@ export const darkTheme = createTheme({
     mode: 'dark',
     primary: {
       main: '#90caf9', // Light blue
+      // main: '#9eb857' // Green
     },
     secondary: {
       main: '#f48fb1', // Light pink
