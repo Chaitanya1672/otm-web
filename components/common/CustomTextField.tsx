@@ -1,5 +1,6 @@
 import { TextField, useTheme, alpha } from '@mui/material'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const CustomTextField = ({ label, ...props }: any) => {
   const theme = useTheme()
   const isDarkMode = theme.palette.mode === 'dark'
