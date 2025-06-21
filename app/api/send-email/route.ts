@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       text: `
         Name: ${name}
         Email: ${email}
-        Message: ${mobileNumber}
+        Mobile Number: ${mobileNumber}
       `,
     }
 
