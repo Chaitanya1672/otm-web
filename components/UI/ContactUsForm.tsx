@@ -138,10 +138,11 @@ const ContactUsForm = () => {
       <Snackbar
         open={open}
         onClose={() => setOpen(false)}
+        autoHideDuration={3000}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{
           '&.MuiSnackbar-root': {
-            bottom: '60px',
+            bottom: '35%',
           },
         }}
       >

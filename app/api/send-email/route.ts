@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer'
 
 export async function POST(req: Request) {
-  const { name, email, message } = await req.json()
-  if (!name || !email || !message) {
+  const { name, email, mobileNumber } = await req.json()
+  if (!name || !email || !mobileNumber) {
     return new Response(
       JSON.stringify({ message: 'All fields are required.' }),
       { status: 400 },
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       text: `
         Name: ${name}
         Email: ${email}
-        Message: ${message}
+        Message: ${mobileNumber}
       `,
     }
 
