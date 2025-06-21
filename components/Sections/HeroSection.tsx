@@ -58,10 +58,20 @@ const HeroSection = () => {
             gap={2}
             alignItems="center"
           >
-            <Button variant="contained" color="primary" fullWidth={isMobile}>
+            <Button
+              variant="contained"
+              color="primary"
+              fullWidth={isMobile}
+              sx={{ borderRadius: '30px' }}
+            >
               Sample PDF
             </Button>
-            <Button variant="outlined" color="primary" fullWidth={isMobile}>
+            <Button
+              variant="outlined"
+              color="primary"
+              fullWidth={isMobile}
+              sx={{ borderRadius: '30px' }}
+            >
               Get Started
             </Button>
           </Box>

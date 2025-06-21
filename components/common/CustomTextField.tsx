@@ -1,4 +1,4 @@
-import { TextField, useTheme, alpha } from '@mui/material'
+import { TextField, useTheme } from '@mui/material'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const CustomTextField = ({ label, ...props }: any) => {
@@ -9,22 +9,24 @@ export const CustomTextField = ({ label, ...props }: any) => {
     <TextField
       fullWidth
       label={label}
+      variant="filled"
       InputProps={{
-        disableUnderline: true,
+        disableUnderline: true, // common for filled variant with custom style
         sx: {
-          backgroundColor: isDarkMode
-            ? alpha('#fff', 0.06)
-            : alpha('#000', 0.06),
           borderRadius: '30px',
           height: '50px',
+          color: (theme) => theme.palette.text.primary,
+
+          // Autofill fix
+          '& input:-webkit-autofill': {
+            WebkitBoxShadow: '0 0 0 1000px transparent inset',
+            transition: 'background-color 5000s ease-in-out 0s',
+          },
         },
       }}
-      InputLabelProps={{
-        sx: {
-          color: !isDarkMode
-            ? theme.palette.text.secondary
-            : theme.palette.text.primary,
-        },
+      sx={{
+        borderRadius: '30px',
+        backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
       }}
       {...props}
     />

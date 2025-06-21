@@ -1,8 +1,8 @@
 import React from 'react'
-import { Box, Grid, Typography, Button, styled } from '@mui/material'
+import { Box, Grid, Typography, styled } from '@mui/material'
 import CustomContainer from '../common/CustomContainer'
 import Image from 'next/image'
-import { CustomTextField } from '../common/CustomTextField'
+import ContactUsForm from './ContactUsForm'
 
 const SecondaryTypography = styled(Typography)(({ theme }) => ({
   variant: 'body2',
@@ -75,38 +75,7 @@ export default function Footer() {
           </Grid>
 
           {/* Contact Form */}
-          <Grid item xs={12} md={4} id="contact-us">
-            <Box>
-              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-                Contact Us
-              </Typography>
-              <SecondaryTypography>
-                Get in touch with us for any inquiries
-              </SecondaryTypography>
-
-              <Box display="flex" flexDirection="column" gap={1} mt={2}>
-                <CustomTextField label="Your Name" fullWidth />
-                <CustomTextField label="Your Email" fullWidth />
-                <CustomTextField label="Contact Number" fullWidth />
-
-                <Button
-                  variant="contained"
-                  sx={{
-                    borderRadius: 4,
-                    mt: 1,
-                    backgroundColor: 'primary.main',
-                    color: '#fff',
-                    '&:hover': {
-                      backgroundColor: 'primary.dark',
-                    },
-                    width: '100%',
-                  }}
-                >
-                  Send Message
-                </Button>
-              </Box>
-            </Box>
-          </Grid>
+          <ContactUsForm />
         </Grid>
 
         {/* Footer Bottom */}

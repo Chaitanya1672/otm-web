@@ -26,7 +26,7 @@ import { Close as CloseIcon } from '@mui/icons-material'
 export default function Navbar() {
   const { isDarkMode, toggleTheme } = useThemeContext()
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   const [drawerOpen, setDrawerOpen] = useState(false)
 
@@ -86,7 +86,9 @@ export default function Navbar() {
                 <Button color="inherit" href={menuItems[4].link}>
                   {menuItems[4].name}
                 </Button>
-                <Button variant="contained">Start Backtesting</Button>
+                <Button variant="contained" sx={{ borderRadius: '30px' }}>
+                  Start Backtesting
+                </Button>
               </>
             )}
 
@@ -177,10 +179,10 @@ export default function Navbar() {
           </Box>
 
           {/* Menu Items */}
-          <Box sx={{ flex: 1, px: 2, py: 1 }}>
-            <List sx={{ '& .MuiListItem-root': { px: 1 } }}>
+          <Box sx={{ flex: 1, px: 1 }}>
+            <List>
               {menuItems.map(({ name, link }) => (
-                <ListItem key={name} sx={{ mb: 0.5 }}>
+                <ListItem key={name}>
                   <Button
                     href={link}
                     fullWidth
@@ -190,8 +192,6 @@ export default function Navbar() {
                       textTransform: 'none',
                       fontSize: '1rem',
                       fontWeight: 400,
-                      py: 1.5,
-                      px: 2,
                       borderRadius: 2,
                       transition: 'all 0.2s ease',
                       '&:hover': {
@@ -216,8 +216,8 @@ export default function Navbar() {
           </Box>
 
           {/* Bottom Action */}
-          <Box sx={{ p: 3, pt: 2 }}>
-            <Divider sx={{ mb: 3, borderColor: 'rgba(255,255,255,0.1)' }} />
+          <Box sx={{ p: 2 }}>
+            <Divider sx={{ mb: 2, borderColor: 'rgba(255,255,255,0.1)' }} />
             <Button
               fullWidth
               variant="contained"
@@ -228,8 +228,7 @@ export default function Navbar() {
                 color: 'white',
                 fontWeight: 600,
                 fontSize: '1rem',
-                py: 1.5,
-                borderRadius: 3,
+                borderRadius: 10,
                 textTransform: 'none',
                 boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
                 border: '1px solid rgba(255,255,255,0.3)',
